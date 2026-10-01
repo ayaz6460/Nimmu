@@ -45,11 +45,11 @@
 @media(prefers-reduced-motion:reduce){.navbar .nav-link{animation:none!important}.menu-toggle,.menu-toggle span,.navbar,.navbar .nav-link,.nav-cta{transition:none!important}}
 
 .hero-intro{display:flex;align-items:center;gap:1rem;margin-bottom:1.6rem}
-.hero-portrait{width:88px;height:88px;flex:0 0 88px;object-fit:cover;object-position:center 34%;border:2px solid rgba(167,139,250,.72);border-radius:50%;box-shadow:0 0 0 5px rgba(167,139,250,.1),0 12px 32px rgba(0,0,0,.28)}
+.hero-portrait{width:150px;height:150px;flex:0 0 150px;object-fit:cover;object-position:center 38%;border:3px solid rgba(167,139,250,.72);border-radius:50%;box-shadow:0 0 0 7px rgba(167,139,250,.1),0 16px 40px rgba(0,0,0,.28)}
 .hero-intro-copy{display:flex;flex-direction:column;align-items:flex-start;gap:.45rem}
 .hero-intro-name{color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.02rem;font-weight:700;letter-spacing:-.025em}
 .hero-intro .hero-badge{margin-bottom:0}
-@media(max-width:650px){.hero-intro{gap:.85rem;margin-bottom:1.35rem}.hero-portrait{width:76px;height:76px;flex-basis:76px}.hero-intro-name{font-size:.92rem}.hero-intro .hero-badge{font-size:.64rem;padding:.38rem .6rem}}
+@media(max-width:650px){.hero-intro{gap:.85rem;margin-bottom:1.35rem}.hero-portrait{width:120px;height:120px;flex-basis:120px}.hero-intro-name{font-size:.92rem}.hero-intro .hero-badge{font-size:.64rem;padding:.38rem .6rem}}
 
 .credentials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem}
 .credential-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:0 14px 40px rgba(0,0,0,.12);transition:transform .45s var(--motion-ease),box-shadow .45s ease,border-color .35s ease}
@@ -153,6 +153,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid rgb
 .contact-facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.1)}
 .contact-facts strong{display:block;margin-top:.38rem;color:#e7e4f6;font-size:.73rem;font-weight:600}
 .contact-card.visible .contact-method{animation:contact-method-in .6s var(--motion-ease) both}
+
+.hero-visual>.dashboard-window,.hero-visual>.float-note{display:none}
+.hero-visual>.hero-feature-portrait{position:relative;z-index:1;display:block;width:min(100%,430px);height:clamp(340px,42vw,510px);object-fit:cover;object-position:center 35%;border:1px solid rgba(8,127,118,.28);border-radius:36px;box-shadow:0 28px 75px rgba(8,35,37,.22),0 0 0 8px rgba(8,127,118,.07);animation:portrait-arrive .8s var(--motion-ease) .24s both}
+@media(max-width:650px){.hero-visual>.hero-feature-portrait{height:360px;border-radius:28px}}
 .contact-card.visible .contact-method:nth-of-type(1){animation-delay:.1s}
 .contact-card.visible .contact-method:nth-of-type(2){animation-delay:.2s}
 @keyframes contact-method-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
